@@ -53,7 +53,7 @@ class FacebookUrlManipulator
             }
 
             if (count($params) > 0) {
-                $query = '?' . http_build_query($params, null, '&');
+                $query = '?' . http_build_query($params, '', '&');
             }
         }
 
@@ -94,7 +94,7 @@ class FacebookUrlManipulator
         // Sort for a predicable order
         ksort($newParams);
 
-        return $path . '?' . http_build_query($newParams, null, '&');
+        return $path . '?' . http_build_query($newParams, '', '&');
     }
 
     /**
