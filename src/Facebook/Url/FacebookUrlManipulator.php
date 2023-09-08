@@ -81,7 +81,7 @@ class FacebookUrlManipulator
         }
 
         if (strpos($url, '?') === false) {
-            return $url . '?' . http_build_query($newParams, null, '&');
+            return $url . '?' . http_build_query($newParams, '', '&');
         }
 
         list($path, $query) = explode('?', $url, 2);
